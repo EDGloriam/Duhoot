@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My page</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- У каждой ОС есть своя кодировка(символ - в байт код) символов. 
+    LINUX хранит файлы в UTF-8-->
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+    <link rel="stylesheet" href="bootstrap-4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <script class="img-fluid" src="bootstrap-4.1.1/js/jquery-3.3.1.slim.min.js" ></script>
+    <!-- <script class="img-fluid" src="jQuery.cssParentSelector.js"></script> -->
+    <script class="img-fluid" src="bootstrap-4.1.1/js/bootstrap.min.js" ></script>
+</head>
+
+
+<body>
+    <header>
+        <div class="container">
+          <!-- d-flex align-items-center -->
+            <div class="row top-nav">
+              <div class="col-3 col-sm-3 logo">
+                  <img src="img/header/logo.png" alt="logo" class="img-fluid">
+              </div>
+
+
+              <nav class="col-5 col-sm-6 navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="navbar-toggler-icon fas fa-bars"></i>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mt-2 mt-lg-0">
+                 <li class="nav-item">
+                      <a class="nav-link" href="#">Reality</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Living</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Educational</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Entertainment</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Mobility</a>
+                    </li>
+                </ul>
+
+              </div>
+                 <form class="form-inline my-2 my-lg-0 d-none d-xl-block">
+                    <button class="search" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                  </form>
+              </nav>
+
+              <div class="col-4 col-sm-3 login">
+                  <i class="fas fa-user"></i>
+                  <span>login</span>
+              </div>
+            </div>
+        </div>
+    </header>
+    
+     <div class="top-search">
+         <div class="container">
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-6">
+                <h2>What are you looking for?</h2>
+                  <form class="row">
+                    <div class="col-md-6">
+                      <select id="inputState" class="form-control">
+                        <option selected>Dubai</option>
+                        <option>Ukraine</option>
+                        <option>USA</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <select class="form-control">
+                        <option selected>Education </option>
+                        <option>Ukraine</option>
+                        <option>USA</option>
+                      </select>
+                    </div>
+                    <div class="col-md-12">
+                      <input type="text" name="" placeholder="Keyword, name, date...">
+                    </div>
+                    <input type="submit" name="" value="search">
+                  </form>
+              </div>      
+            </div>    
+        </div>
+     </div><!-- end of top-search-->
+
+     <div class="filter-row">
+       <div class="container">
+         <div class="row">
+           <div class="col-6 col-lg-3 col-xl-4">
+             <nav class="navbar navbar-expand-xl">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="navbar-toggler-icon fas fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mt-2 mt-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Recomended</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Latest</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Hightlights</a>
+                  </li>
+                </ul>
+              </div>
+              </nav>
+           </div>
+
+           <div class="col-12 col-lg-5 col-xl-4 location">
+            <div class="row">
+              <div class="col-6 col-sm-6">
+                <form action="">
+                  <select id="inputState">
+                    <option selected>Dubai</option>
+                    <option>Ukraine</option>
+                    <option>USA</option>
+                  </select>
+                </form>
+              </div>
+              <div class="col-6 col-sm-6 btn-container">
+                <button>Show Map</button>
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+            </div>
+           </div>
+
+           <div class="col-6 col-lg-4 col-xl-4 filter">
+            <nav class="navbar navbar-expand-md">
+              <span>Filter:</span>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-angle-down"></i>
+              </button>
+              
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mt-2 mt-lg-0">
+                  <li class="nav-item">
+                    <div class="group-badge home select"><i class="fas fa-home"></i></div>
+                    <div class="group-badge user"><i class="far fa-user"></i></div>
+                  </li>
+                  <li class="nav-item">
+                    <div class="group-badge cap"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="group-badge music select"><i class="fas fa-music"></i></div>
+                  </li>
+                  <li class="nav-item">
+                    <div class="group-badge bus select"><i class="fas fa-bus"></i></div>
+                  </li> 
+                </ul>
+              </div>
+              </nav>
+           </div>
+
+         </div>
+       </div>
+     </div><!-- end of filter-row-->
+
+
+
+     <div class="content">
+      <div class="container">
+        <div class="row">
+          <div class="item col-10 col-sm-6 col-md-3">
+            <div class="top">
+              <img class="img-fluid" src="img/offers/home.png" alt="">
+              <div class="badge-wrapper-central">
+                <div class="group-badge home color-bg"><i class="fas fa-home"></i></div>
+              </div>
+              </div>
+            <div class="bottom">
+               <p class="title">2 bedroom house for rent in Dubai</p>
+              <p class="offer-type">
+                Vision Agency
+              </p>
+              <div class="rate">
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star"></span>
+                <span class="far fa-star"></span>
+                <span class="amount">(365)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="item col-10 col-sm-6 col-md-3">
+            <div class="top">
+              <img class="img-fluid" src="img/offers/music.png" alt="">
+              <div class="badge-wrapper-central">
+                <div class="group-badge music color-bg"><i class="fas fa-music"></i></div> 
+              </div>
+            </div>
+            <div class="bottom">
+               <p class="title">2 bedroom house for rent in Dubai</p>
+              <p class="offer-type">
+                Vision Agency
+              </p>
+              <div class="rate">
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star"></span>
+                <span class="far fa-star"></span>
+                <span class="amount">(365)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="item col-10 col-sm-6 col-md-3">
+            <div class="top">
+              <img class="img-fluid" src="img/offers/home.png" alt="">
+              <div class="badge-wrapper-central">
+                <div class="group-badge bus color-bg"><i class="fas fa-bus"></i></div> 
+              </div>
+            </div>
+            <div class="bottom">
+               <p class="title">2 bedroom house for rent in Dubai</p>
+              <p class="offer-type">
+                Vision Agency
+              </p>
+              <div class="rate">
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star"></span>
+                <span class="far fa-star"></span>
+                <span class="amount">(365)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="item col-10 col-sm-6 col-md-3">
+            <div class="top">
+              <img class="img-fluid" src="img/offers/home.png" alt="">
+              <div class="badge-wrapper-central">
+                <div class="group-badge home color-bg"><i class="fas fa-home"></i></div> 
+              </div>
+            </div>
+            <div class="bottom">
+               <p class="title">2 bedroom house for rent in Dubai</p>
+              <p class="offer-type">
+                Vision Agency
+              </p>
+              <div class="rate">
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star"></span>
+                <span class="far fa-star"></span>
+                <span class="amount">(365)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="item col-12 col-lg-6 big">
+            <div class="top">
+              <img class="img-fluid" src="img/offers/long.png" alt="">
+              <div class="badge-wrapper-central">
+                <div class="group-badge home color-bg"><i class="fas fa-home"></i></div>
+                <div class="rate-info">
+                  <p class="offer-type">
+                  Vision Agency
+                </p> 
+                <div class="rate">
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star"></span>
+                  <span class="far fa-star"></span>
+                  <span class="amount">(365)</span>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="avatar">
+                <img src="img/avatars/ava1.png" alt="">
+              </div>
+              <div class="review-info">
+                <div class="rate">
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star"></span>
+                  <span class="far fa-star"></span>
+                  
+                </div>
+                <p class="author">Lucy-P</p> 
+                <p class="comment">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet accusantium mollitia nobis, ullam at in vero hic magnam illum amet nemo fugit, nulla deserunt. 
+                  <a href="#" class="more">...read more</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item col-12 col-lg-6 big">
+           <div class="top">
+              <img class="img-fluid" src="img/offers/long-house.png" alt="">
+              <div class="badge-wrapper-central">
+                <div class="group-badge home color-bg"><i class="fas fa-home"></i></div>
+                <div class="rate-info">
+                  <p class="offer-type">
+                  Vision Agency
+                </p> 
+                <div class="rate">
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star"></span>
+                  <span class="far fa-star"></span>
+                  <span class="amount">(365)</span>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="avatar">
+                <img src="img/avatars/ava1.png" alt="">
+              </div>
+              <div class="review-info">
+                <div class="rate">
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star"></span>
+                  <span class="far fa-star"></span>
+                  
+                </div>
+                <p class="author">Lucy-P</p> 
+                <p class="comment">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet accusantium mollitia nobis, ullam at in vero hic magnam illum amet nemo fugit, nulla deserunt. 
+                  <a href="#" class="more">...read more</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="item col-10 col-sm-6 col-md-3">
+            <div class="top">
+              <img class="img-fluid" src="img/offers/home.png" alt="">
+              <div class="badge-wrapper-central">
+                <div class="group-badge home color-bg"><i class="fas fa-home"></i></div> 
+              </div>
+            </div>
+            <div class="bottom">
+               <p class="title">2 bedroom house for rent in Dubai</p>
+              <p class="offer-type">
+                Vision Agency
+              </p>
+              <div class="rate">
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star"></span>
+                <span class="far fa-star"></span>
+                <span class="amount">(365)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="item col-10 col-sm-6 col-md-3">
+            <div class="top">
+              <img class="img-fluid" src="img/offers/music.png" alt="">
+              <div class="badge-wrapper-central">
+                <div class="group-badge music color-bg"><i class="fas fa-music"></i></div> 
+              </div>
+            </div>
+            <div class="bottom">
+               <p class="title">2 bedroom house for rent in Dubai</p>
+              <p class="offer-type">
+                Vision Agency
+              </p>
+              <div class="rate">
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star"></span>
+                <span class="far fa-star"></span>
+                <span class="amount">(365)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="item col-10 col-sm-6 col-md-3">
+            <div class="top">
+              <img class="img-fluid" src="img/offers/home.png" alt="">
+              <div class="badge-wrapper-central">
+                <div class="group-badge home color-bg"><i class="fas fa-home"></i></div> 
+              </div>
+            </div>
+            <div class="bottom">
+               <p class="title">2 bedroom house for rent in Dubai</p>
+              <p class="offer-type">
+                Vision Agency
+              </p>
+              <div class="rate">
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star"></span>
+                <span class="far fa-star"></span>
+                <span class="amount">(365)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="item col-10 col-sm-6 col-md-3">
+            <div class="top">
+              <img class="img-fluid" src="img/offers/home.png" alt="">
+              <div class="badge-wrapper-central">
+                <div class="group-badge bus color-bg"><i class="fas fa-bus"></i></div> 
+              </div>
+            </div>
+            <div class="bottom">
+               <p class="title">2 bedroom house for rent in Dubai</p>
+              <p class="offer-type">
+                Vision Agency
+              </p>
+              <div class="rate">
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star checked"></span>
+                <span class="far fa-star"></span>
+                <span class="far fa-star"></span>
+                <span class="amount">(365)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="item col-12 col-lg-6 big">
+            <div class="top">
+              <img class="img-fluid" src="img/offers/long.png" alt="">
+              <div class="badge-wrapper-central">
+                <div class="group-badge home color-bg"><i class="fas fa-home"></i></div>
+                <div class="rate-info">
+                  <p class="offer-type">
+                  Vision Agency
+                </p> 
+                <div class="rate">
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star"></span>
+                  <span class="far fa-star"></span>
+                  <span class="amount">(365)</span>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom">
+               <div class="avatar">
+                <img src="img/avatars/ava1.png" alt="">
+              </div>
+              <div class="review-info">
+                <div class="rate">
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star"></span>
+                  <span class="far fa-star"></span>
+                  
+                </div>
+                <p class="author">Lucy-P</p> 
+                <p class="comment">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet accusantium mollitia nobis, ullam at in vero hic magnam illum amet nemo fugit, nulla deserunt. 
+                  <a href="#" class="more">...read more</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item col-12 col-lg-6 big">
+            <div class="top">
+              <img class="img-fluid" src="img/offers/long-house.png" alt="">
+              <div class="badge-wrapper-central">
+                <div class="group-badge home color-bg"><i class="fas fa-home"></i></div>
+                <div class="rate-info">
+                  <p class="offer-type">
+                  Vision Agency
+                </p> 
+                <div class="rate">
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star"></span>
+                  <span class="far fa-star"></span>
+                  <span class="amount">(365)</span>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="avatar">
+                <img src="img/avatars/ava1.png" alt="">
+              </div>
+              <div class="review-info">
+                <div class="rate">
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star checked"></span>
+                  <span class="far fa-star"></span>
+                  <span class="far fa-star"></span>
+                  
+                </div>
+                <p class="author">Lucy-P</p> 
+                <p class="comment">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet accusantium mollitia nobis, ullam at in vero hic magnam illum amet nemo fugit, nulla deserunt. 
+                  <a href="#" class="more">...read more</a>
+                </p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+      <div class="row">
+        <div class="col view-more">
+           <div class="col-auto wrapper">
+             <a href="#">Load more</a><i class="fas fa-long-arrow-alt-right"></i>
+           </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col offer">
+          <h3>
+            What can DuHoot offer to you?
+          </h3>
+          <p>Etiam cursus ipsum quis enim faucibus</p>
+        </div>
+      </div>
+
+      <div class="row epilogue d-flex justify-content-center align-items-center">
+        
+        <div class="col-1 d-flex align-items-center">
+          <div class="group-badge home">
+            <i class="fas fa-home"></i>  
+          </div>
+        </div>
+        <div class="col col-1 divider"></div>
+
+
+        <div class="col-1 d-flex align-items-center">
+          <div class="group-badge user">
+            <i class="fas fa-user"></i>  
+          </div>
+        </div>
+        <div class="col col-1 divider"></div>
+
+
+        <div class="col-1 d-flex align-items-center">
+          <div class="group-badge cap">
+            <i class="fas fa-graduation-cap"></i>  
+          </div>
+        </div>
+        <div class="col col-1 divider"></div>
+
+
+        <div class="col-1 d-flex align-items-center">
+          <div class="group-badge music">
+            <i class="fas fa-music"></i>  
+          </div>
+        </div>
+        <div class="col col-1 divider"></div>
+
+
+        <div class="col-1 d-flex align-items-center">
+          <div class="group-badge bus">
+            <i class="fas fa-bus"></i>  
+          </div>
+        </div>
+      </div><!-- END of epilogue-->
+      
+      <div class="row reality">
+        <h2 class="col-12">Reality</h2>
+        <div class="col-12 col-lg-6">
+          <div class="row">
+              <div class="icon-wrapper col-sm-2">
+                <div class="icon">
+                  <i class="fas fa-bolt"></i>
+                </div>
+              </div>
+           
+              <p class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et accusantium culpa atque vitae natus iusto repellat reprehenderit dicta, ullam temporibus dolores doloremque, tempore ab id. Eligendi ratione, laborum porro cupiditate.</p>
+            
+          </div>
+          
+          
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row">
+              <div class="icon-wrapper col-sm-2">
+                <div class="icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              </div>
+          
+               <p class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis eius possimus ullam reprehenderit rerum obcaecati odio voluptatibus. Aspernatur explicabo cumque repellendus numquam, laboriosam, fuga cupiditate reprehenderit culpa delectus vitae, debitis.</p>
+          </div>
+          
+         
+        </div>
+      </div>
+    </div><!-- END of Conteiner-->
+  </div><!-- END of Content-->
+  
+
+
+  <footer>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+          <h3> Subscribe to our newsletter</h3>
+          <form action="">
+            <i class="far fa-envelope"></i>
+            <input type="text" placeholder="your@email.com" class="email">
+            <button>Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+
+      <div class="row menu-links">
+        <div class="col-10 col-sm-6 col-md-4">
+          <h4><span>Ipsum quis</span></h4>
+          <ul>
+            <li><a href="#">Aliquam quis</a></li>
+            <li><a href="#">Aliquam quis</a></li>
+            <li><a href="#">Aliquam quis</a></li>
+            <li><a href="#">Aliquam quis</a></li>
+            <li><a href="#">Aliquam quis</a></li>
+          </ul>
+        </div>
+        <div class="col-10 col-sm-6 col-md-4">
+          <h4><span>Ipsum quis</span></h4>
+           <ul>
+            <li><a href="#">Aliquam quis</a></li>
+            <li><a href="#">Aliquam quis</a></li>
+            <li><a href="#">Aliquam quis</a></li>
+            <li><a href="#">Aliquam quis</a></li>
+            <li><a href="#">Aliquam quis</a></li>
+          </ul>
+        </div>
+        <div class="col-10 col-sm-6 col-md-4">
+          <h4><span>Follow us</span></h4>
+          <div class="social">
+            <div class="fb"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+            <div class="tw"><a href="#"><i class="fab fa-twitter"></i></a></div>
+            <div class="google"><a href="#"><i class="fab fa-goodreads-g"></i></a></div>
+            <div class="youtube"><a href="#"><i class="fab fa-youtube"></i></a></div>
+          </div>
+          <p class="copy">Copyright © All Rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
